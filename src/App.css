@@ -1,0 +1,57 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap');
+
+body {
+  background-color: #03193A;
+  font-family: "Jost", sans-serif;
+  color: #fff;
+}
+
+button, a {
+  cursor: pointer;
+}
+p, a {
+  color: #90A2BD;
+}
+.btn {
+  padding: 9px 12px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.btn-primary {
+  background-color: #01AF70;
+}
+.btn-secondary {
+  background-color: #12294A;
+}
+.btn-third {
+  background-color: #3555FF;
+}
+.btn-full {
+  width: 100%;
+}
+
+.btn-banner {
+  font-size: 21px;
+  line-height: 21px;
+  padding: 16px 88px;
+  background-color: #FF0960;
+  border-radius: 8px;
+}
+
+.container-inner {
+  max-width: 1440px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (min-width: 640px) {
+  .triple-slide .slick-slide {
+    opacity: 0.5;
+  }
+  .triple-slide .slick-slide.slick-active {
+    opacity: 1;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
