@@ -1,6 +1,6 @@
-import icon_hampuger from '../assets/icon_hambuger.svg'
-import logo_header from '../assets/logo_header.svg'
-import icon_search from '../assets/icon_search.svg'
+import icon_hamburger from '../assets/icon_hamburger.svg';
+import logo_header from '../assets/logo_header.svg';
+import icon_search from '../assets/icon_search.svg';
 
 function Header () {
   return (
@@ -9,24 +9,23 @@ function Header () {
         <div className='flex items-center gap-14'>
           <div className='flex gap-1.5'>
             <button>
-              <img src={icon_hampuger} />
+              <img src={icon_hamburger} alt="Menu" />
             </button>
             <a href='#'>
-              <img src={logo_header} />
+              <img src={logo_header} alt="Logo" />
             </a>
           </div>
           <div className='hidden lg:flex items-center gap-8'>
             <button>
-              <img src={icon_search} />
+              <img src={icon_search} alt="Search" />
             </button>
             <nav>
               <ul className='flex gap-6'>
-                <li><a className='text-sm font-medium text-[#CAD3E1] uppercase ' href='#'>Home</a></li>
-                <li><a className='text-sm font-medium text-[#CAD3E1] uppercase ' href='#'>Game</a></li>
-                <li><a className='text-sm font-medium text-[#CAD3E1] uppercase ' href='#'>Infor</a></li>
-                <li><a className='text-sm font-medium text-[#CAD3E1] uppercase ' href='#'>News</a></li>
-                <li><a className='text-sm font-medium text-[#CAD3E1] uppercase ' href='#'>Promotions</a></li>
-                <li><a className='text-sm font-medium text-[#CAD3E1] uppercase ' href='#'>VIP</a></li>
+                {['Home', 'Game', 'Infor', 'News', 'Promotions', 'VIP'].map((item, index) => (
+                  <li key={index}>
+                    <a className='text-sm font-medium text-[#CAD3E1] uppercase' href='#'>{item}</a>
+                  </li>
+                ))}
               </ul>
             </nav>
           </div>
@@ -37,7 +36,7 @@ function Header () {
         </div>
       </div>
     </header>
-  )
+  );
 }
 
-export default Header
+export default Header;

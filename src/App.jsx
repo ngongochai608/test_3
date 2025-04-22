@@ -10,7 +10,7 @@ function App() {
   return (
     <>
       <Header />
-      <Banner />
+      <Banner />   
       <div className='px-4 container-inner'>
         <Tabs />
         <ExclusiveGames />
