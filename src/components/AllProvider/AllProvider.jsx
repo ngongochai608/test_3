@@ -4,15 +4,16 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import { Navigation } from 'swiper/modules';
 
-import see_all from '../assets/see_all.svg';
-import provider_1 from '../assets/provider_1.svg';
-import provider_2 from '../assets/provider_2.svg';
-import provider_3 from '../assets/provider_3.svg';
-import provider_4 from '../assets/provider_4.svg';
-import provider_5 from '../assets/provider_5.svg';
-import provider_6 from '../assets/provider_6.svg';
-import provider_7 from '../assets/provider_7.svg';
-import provider_8 from '../assets/provider_8.svg';
+import see_all from '../../assets/see_all.svg';
+import provider_1 from '../../assets/provider_1.svg';
+import provider_2 from '../../assets/provider_2.svg';
+import provider_3 from '../../assets/provider_3.svg';
+import provider_4 from '../../assets/provider_4.svg';
+import provider_5 from '../../assets/provider_5.svg';
+import provider_6 from '../../assets/provider_6.svg';
+import provider_7 from '../../assets/provider_7.svg';
+import provider_8 from '../../assets/provider_8.svg';
+import './AllProvider.css';
 
 const providers = [
   { src: provider_1, name: 'Evolution', games: '312 games' },
@@ -27,16 +28,16 @@ const providers = [
 
 function AllProvider() {
   return (
-    <div className="mb-10">
-      <div className="flex justify-between mb-8">
-        <h3 className="text-sm lg:text-3xl">Exclusive Games</h3>
-        <button className="flex items-center gap-2">
-          <span className="hidden lg:inline">SEE ALL</span>
+    <div className="all-provider">
+      <div className="all-provider__header">
+        <h3 className="all-provider__title">Exclusive Games</h3>
+        <button className="all-provider__see-all">
+          <span className="all-provider__see-all-text">SEE ALL</span>
           <img src={see_all} alt="See All" />
         </button>
       </div>
 
-      <div className="max-w-[1332px] mx-auto">
+      <div className="all-provider__swiper-container">
         <Swiper
           modules={[Navigation]}
           spaceBetween={16}
@@ -53,16 +54,13 @@ function AllProvider() {
         >
           {providers.map((provider, index) => (
             <SwiperSlide key={index}>
-              <div className="bg-[#12294A] rounded-lg flex flex-col h-[122px]">
-                <div className="flex items-center py-4 flex-1">
-                  <img className="mx-auto" src={provider.src} alt={provider.name} />
+              <div className="all-provider__card">
+                <div className="all-provider__card-image-container">
+                  <img className="all-provider__card-image" src={provider.src} alt={provider.name} />
                 </div>
-                <a
-                  href="#"
-                  className="flex flex-col items-center underline justify-center bg-[#F5F9FF0D] text-center h-[54px]"
-                >
-                  <h5 className="text-[13px]">{provider.name}</h5>
-                  <p className="text-[11px]">{provider.games}</p>
+                <a href="#" className="all-provider__card-link">
+                  <h5 className="all-provider__card-name">{provider.name}</h5>
+                  <p className="all-provider__card-games">{provider.games}</p>
                 </a>
               </div>
             </SwiperSlide>

@@ -1,0 +1,103 @@
+.header {
+  padding: 16px;
+  border-bottom: 1px solid rgba(245, 249, 255, 0.05);
+  background-color: #03193A;
+}
+
+.header__container {
+  max-width: 1440px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header__left {
+  display: flex;
+  align-items: center;
+  gap: 56px;
+}
+
+.header__menu-logo {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.header__menu-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.header__logo img {
+  display: block;
+}
+
+.header__nav {
+  display: none;
+}
+
+.header__nav--desktop {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+.header__search-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.header__nav-list {
+  display: flex;
+  gap: 24px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.header__nav-item {
+}
+
+.header__nav-link {
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: 500;
+  color: #CAD3E1;
+  text-decoration: none;
+}
+
+.header__nav-link:hover {
+  color: #fff;
+}
+
+.header__right {
+  display: flex;
+  gap: 8px;
+}
+
+.header__button {
+  padding: 9px 12px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.header__button--secondary {
+  background-color: #12294A;
+  color: #fff;
+}
+
+.header__button--primary {
+  background-color: #01AF70;
+  color: #fff;
+}
+
+@media (max-width: 1024px) {
+  .header__nav--desktop {
+    display: none;
+  }
+}

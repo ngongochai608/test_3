@@ -1,0 +1,79 @@
+.all-provider {
+  margin-bottom: 40px;
+}
+
+.all-provider__header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 32px;
+}
+
+.all-provider__title {
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.all-provider__see-all {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.all-provider__see-all-text {
+  display: none;
+}
+
+.all-provider__swiper-container {
+  max-width: 1332px;
+  margin: 0 auto;
+}
+
+.all-provider__card {
+  background-color: #12294A;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  height: 122px;
+}
+
+.all-provider__card-image-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  padding: 16px 0;
+}
+
+.all-provider__card-image {
+  max-width: 100%;
+  height: auto;
+}
+
+.all-provider__card-link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  text-decoration: underline;
+  background-color: rgba(245, 249, 255, 0.05);
+  height: 54px;
+}
+
+.all-provider__card-name {
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.all-provider__card-games {
+  font-size: 11px;
+}
+
+@media (min-width: 1024px) {
+  .all-provider__see-all-text {
+    display: inline;
+  }
+}

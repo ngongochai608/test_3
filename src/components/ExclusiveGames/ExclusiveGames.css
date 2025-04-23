@@ -1,0 +1,48 @@
+.exclusive-games {
+  margin: 28px 0 32px;
+}
+
+.exclusive-games__header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 32px;
+}
+
+.exclusive-games__title {
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.exclusive-games__see-all {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.exclusive-games__see-all-text {
+  display: none;
+}
+
+.exclusive-games__card {
+  position: relative;
+}
+
+.exclusive-games__card-image {
+  width: 100%;
+  height: auto;
+}
+
+.exclusive-games__card-icon {
+  position: absolute;
+  top: 14px;
+  left: 0;
+}
+
+@media (min-width: 1024px) {
+  .exclusive-games__see-all-text {
+    display: inline;
+  }
+}
